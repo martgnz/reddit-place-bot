@@ -1,0 +1,35 @@
+{
+  "name": "r-place-bot",
+  "version": "1.0.0",
+  "description": "A bot that tweets a drawing from Reddit's r/place every hour",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/index.js",
+    "download:atlas": "node scripts/download-atlas.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martgnz/r-place-bot.git"
+  },
+  "keywords": ["reddit", "r/place", "bot", "twitter"],
+  "author": {
+    "name": "Martín González Gómez",
+    "url": "https://martingonzalez.net"
+  },
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/martgnz/r-place-bot/issues"
+  },
+  "homepage": "https://twitter.com/rplacebot",
+  "dependencies": {
+    "canvas": "^2.9.1",
+    "d3-fetch": "^3.0.1",
+    "d3-scale": "^4.0.2",
+    "d3-shape": "^3.0.1",
+    "dotenv": "^16.0.0",
+    "node-fetch": "^3.2.3",
+    "twitter-api-v2": "^1.12.0"
+  }
+}

@@ -24,4 +24,4 @@ $ npm start
 
 ## Scheduling
 
-This bot uses GitHub actions to schedule a tweet every hour. A simple cron job is used. You can run it more frequently (or less) [adjusting the values](https://github.com/martgnz/r-place-bot/blob/main/.github/workflows/tweet.yml) in the actions file.
+This bot uses GitHub actions to schedule a tweet every hour. A simple cron job is used. You can run it more frequently (or less) by [adjusting the values](https://github.com/martgnz/r-place-bot/blob/main/.github/workflows/tweet.yml) in the actions file.

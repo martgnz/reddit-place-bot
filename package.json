@@ -1,5 +1,5 @@
 {
-  "name": "r-place-bot",
+  "name": "reddit-place-bot",
   "version": "1.0.0",
   "description": "A bot that tweets a drawing from Reddit's r/place every hour",
   "main": "index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/martgnz/r-place-bot.git"
+    "url": "git+https://github.com/martgnz/reddit-place-bot.git"
   },
   "keywords": ["reddit", "r/place", "bot", "twitter"],
   "author": {
@@ -20,7 +20,7 @@
   },
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/martgnz/r-place-bot/issues"
+    "url": "https://github.com/martgnz/reddit-place-bot/issues"
   },
   "homepage": "https://twitter.com/rplacebot",
   "dependencies": {

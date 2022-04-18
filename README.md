@@ -1,4 +1,4 @@
-# r/place-bot
+# Reddit r/place bot
 
 A Twitter bot that tweets a drawing from Reddit's [r/place](https://www.reddit.com/r/place/) every hour.
 

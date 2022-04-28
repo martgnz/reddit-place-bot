@@ -65,21 +65,18 @@ export default async (datum) => {
   ctx.drawImage(place, imageX[0], imageY[0], drawingWidth, drawingHeight, 0, 0, targetWidth, targetHeight);
   
   // draw dark background so the drawing is highlighted
-  ctx.beginPath();
-  ctx.fillStyle = 'rgba(0, 0, 0, .5)';
-  ctx.fillRect(0, 0, targetWidth, targetHeight);
-  ctx.closePath();
+  // ctx.beginPath();
+  // ctx.fillStyle = 'rgba(0, 0, 0, .5)';
+  // ctx.fillRect(0, 0, targetWidth, targetHeight);
+  // ctx.closePath();
   
   // and draw a clipping mask over it
   // https://stackoverflow.com/questions/4821679/canvas-clip-reverse-action
-  path.context(ctx);
-  ctx.beginPath();
-  // ctx.lineWidth = 10
-  // ctx.strokeStyle = 'white';
-  path(datum.path);
-  // ctx.stroke();
-  ctx.closePath();
-  ctx.clip();
+  // path.context(ctx);
+  // ctx.beginPath();
+  // path(datum.path);
+  // ctx.closePath();
+  // ctx.clip();
 
   // redraw background in the clipped area
   ctx.drawImage(place, imageX[0], imageY[0], drawingWidth, drawingHeight, 0, 0, targetWidth, targetHeight);

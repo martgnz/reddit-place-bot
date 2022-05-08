@@ -79,7 +79,7 @@ export default async (datum) => {
   // ctx.clip();
 
   // redraw background in the clipped area
-  ctx.drawImage(place, imageX[0], imageY[0], drawingWidth, drawingHeight, 0, 0, targetWidth, targetHeight);
+  // ctx.drawImage(place, imageX[0], imageY[0], drawingWidth, drawingHeight, 0, 0, targetWidth, targetHeight);
   
   // draw image to a buffer and write it
   const buffer = canvas.toBuffer('image/png');

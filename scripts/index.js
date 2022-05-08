@@ -32,7 +32,7 @@ const getFilesInFolder = async(folder) => {
   // choose random drawing
   const randomIdx = Math.floor(Math.random() * data.length);
   const datum = data[randomIdx];
-  // const datum = data.find(d => d.id === 'u0m3up');
+  // const datum = data.find(d => d.id === 'tx3696');
 
   console.log('processing id:', datum.id);
 

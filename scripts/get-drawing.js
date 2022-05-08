@@ -42,7 +42,9 @@ export default async (datum) => {
   let targetHeight = Math.floor(targetWidth * aspectRatio);
 
   // for extremely tall images e.g. belgium flag (id: twtp8q)
-  if (targetHeight > 10e3) {
+  // twitter size limit is 8192x8192
+  // TODO: smarter resizing
+  if (targetHeight > 8192) {
     targetWidth = 640;
     targetHeight = Math.floor(targetWidth * aspectRatio);
   }

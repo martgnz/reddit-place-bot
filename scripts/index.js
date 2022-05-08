@@ -15,10 +15,10 @@ const getFilesInFolder = async(folder) => {
   // load json data from atlas
   // https://place-atlas.stefanocoding.me/
   const raw = await fs.readFile('./input-data/atlas.json', {
-		encoding: 'utf8',
-	});
+    encoding: 'utf8',
+  });
 
-	const rawData = await JSON.parse(raw);
+  const rawData = await JSON.parse(raw);
 
   // get drawings that have been posted already
   const outputFiles = await getFilesInFolder('./output-data');

@@ -25,10 +25,15 @@ export default async (datum) => {
     .y(d => y(d[1]))
     .curve(curveLinearClosed);
 
+  // new data format with timestamp: {path: {'1-166, T': [coords]}}
+  // we fetch the first element that includes the "166" timestamp
+  // 166 being the snapshot of final canvas
+  const key = Object.keys(datum.path).find(d => d.includes("166"));
+
   // get drawing limits
   // min and max for each path taking margins into account
-  const imageX = [Math.min(...datum.path.map(d => d[0])) - margin, Math.max(...datum.path.map(d => d[0])) + margin];
-  const imageY = [Math.min(...datum.path.map(d => d[1])) - margin, Math.max(...datum.path.map(d => d[1])) + margin];
+  const imageX = [Math.min(...datum.path[key].map(d => d[0])) - margin, Math.max(...datum.path[key].map(d => d[0])) + margin];
+  const imageY = [Math.min(...datum.path[key].map(d => d[1])) - margin, Math.max(...datum.path[key].map(d => d[1])) + margin];
   
   // get width and height of drawing by substracting the coordinates
   const drawingWidth = imageX.reduce((prev, curr) => curr - prev);

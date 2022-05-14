@@ -26,7 +26,14 @@ const getFilesInFolder = async(folder) => {
   // clean drawings without path data
   // clean drawings that have been already posted
   const data = rawData
-    .filter(d => d.path.length > 0)
+    .filter(d => Object.keys(d.path).length > 0)
+    .filter(d => {
+      // r/place atlas changed the data format
+      // now paths have a timestamp
+      // it seems that including "166" means that it appeared on the final canvas
+      // https://github.com/placeAtlas/atlas/issues/1314#issuecomment-1101461573
+      return Object.keys(d.path).find(d => d.includes("166"));
+    })
     .filter(d => !outputFiles.includes(d.id));
 
   // choose random drawing
